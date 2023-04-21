@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSMIS-Catering Service Management Information System</title>
+
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-DYj+89rHxRmlJPrV7+u8lL92Z7a9fOq3zJ0/kj+whOy7xoh+e3cHY3bkg8mBrZJ19MzHtmRnA7gW8YtJTrBkxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-lX0iWsLJ7eGcJPMOy7syYYC/qxwcpwih36oShQOk/M7AdPP9L1sZ7wnhBYlyzKj+FVx8Wzg/mwvLaj33YtHjLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ 
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="image/DAT.jpeg" alt="Logo" style="border-radius: 40%;"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="far fa-list-alt"></i> Import Data <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="showFileImport()">Employee Import</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#menuImportModal">Menu Import</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#holidayImportModal">Holiday Import</a></li>
+                    </ul>
+             </li>  
+              <li><a href="listpage.html"><i class="far fa-list-alt"></i> List</a></li>
+              <li><a href="#"><i class="far fa-list-alt"></i> Menu</a></li>
+              <li><a href="#"><i class="fas fa-user-cog"></i> Setting</a></li>
+              <li><a href="homepage.html"><i class="fas fa-user"></i> Log Out </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="d-flex flex-column">
+        <ul class="nav nav-tabs flex-row" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="user-list-tab" data-toggle="tab" href="#user-list" role="tab" aria-controls="user-list" aria-selected="true">User List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="register-list-tab" data-toggle="tab" href="#register-list" role="tab" aria-controls="register-list" aria-selected="false">Register List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="unregister-list-tab" data-toggle="tab" href="#unregister-list" role="tab" aria-controls="unregister-list" aria-selected="false">Unregister List</a>
+          </li>
+        </ul>
+      
+        <div class="tab-content flex-row" id="myTabContent">
+          <div class="tab-pane fade show active" id="user-list" role="tabpanel" aria-labelledby="user-list-tab">
+            <div class="search-table-container">
+                <div class="search-container">
+                  <input type="text" placeholder="Search...">
+                  <button><i class="fas fa-search"></i></button>
+                </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USR001</td>
+                  <td>David</td>
+                  <td>Admin</td>
+                  <td>Active</td>
+                  <td><i class="fas fa-user-edit"></i></td>
+                  <td><i class="fas fa-user-times"></i></td>
+                </tr>
+                <tr>
+                    <td>USR002</td>
+                    <td>John</td>
+                    <td>Operator</td>
+                    <td>Active</td>
+                    <td><i class="fas fa-user-edit"></i></td>
+                    <td><i class="fas fa-user-times"></i></td>
+                  </tr>
+               
+              </tbody>
+            </table>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="register-list" role="tabpanel" aria-labelledby="register-list-tab">
+            <div class="search-table-container">
+                <div class="search-container">
+                  <input type="text" placeholder="Search...">
+                  <button><i class="fas fa-search"></i></button>
+                </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>REG001</td>
+                  <td>Alice</td>
+                  <td>Operator</td>
+                  <td>Active</td>
+                  <td><i class="fas fa-user-edit"></i></td>
+                  <td><i class="fas fa-user-times"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="unregister-list" role="tabpanel" aria-labelledby="unregister-list-tab">
+            <div class="search-table-container">
+              <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>UREG001</td>
+                      <td>Scarlet</td>
+                      <td>Operator</td>
+                      <td>Active</td>
+                      <td><i class="fas fa-user-edit"></i></td>
+                      <td><i class="fas fa-user-times"></i></td>
+                    </tr>
+                  </tbody>                  
+              </table>
+            </div>
+          </div>          
+      </div>
+    
+      
+    
+   
+  
+        
+</body>
+</html>    

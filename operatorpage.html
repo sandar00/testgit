@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSMIS-Catering Service Management Information System</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-DYj+89rHxRmlJPrV7+u8lL92Z7a9fOq3zJ0/kj+whOy7xoh+e3cHY3bkg8mBrZJ19MzHtmRnA7gW8YtJTrBkxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-lX0iWsLJ7eGcJPMOy7syYYC/qxwcpwih36oShQOk/M7AdPP9L1sZ7wnhBYlyzKj+FVx8Wzg/mwvLaj33YtHjLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   
+
+    
+
+</head>
+<body>
+
+    <!-- Navbar code here -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="image/DAT.jpeg" alt="Logo" style="border-radius: 40%;"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="cateringregistration.html"><i class="far fa-calendar-alt"></i> Catering Registration</a></li>
+              <li><a href="#"><i class="far fa-list-alt"></i> Menu</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> Account <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div style="text-align:center;">
+                      <label class="switch">
+                        <input type="checkbox" id="notification-toggle">
+                        <span class="slider round"></span>
+                        <span id="notification-label"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li><a href="#">Change Password</a></li>
+                  <li><a href="homepage.html">Log Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+      <script>
+        var toggle = document.getElementById("notification-toggle");
+toggle.addEventListener("change", function() {
+  if (toggle.checked) {
+    // Notification is ON
+    toggle.parentElement.classList.add("toggle-on");
+    toggle.parentElement.classList.remove("toggle-off");
+  } else {
+    // Notification is OFF
+    toggle.parentElement.classList.add("toggle-off");
+    toggle.parentElement.classList.remove("toggle-on");
+  }
+});
+const notificationToggle = document.querySelector('#notification-toggle');
+const notificationLabel = document.querySelector('#notification-label');
+
+notificationToggle.addEventListener('change', function() {
+  if (this.checked) {
+    notificationLabel.textContent = 'ON';
+  } else {
+    notificationLabel.textContent = 'OFF';
+  }    
+});
+</script>
+      
+      
+    
+    <!-- Link to Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+        
+</body>
+</html>    
